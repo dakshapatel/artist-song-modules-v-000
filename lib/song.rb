@@ -22,8 +22,7 @@ class Song
     @@songs.detect{|a| a.name == name}
   end
 
-
-  #####
+  #can reset the songs that have been created
   def self.reset_all
     #clear songs in the array
     #@@songs.clear
