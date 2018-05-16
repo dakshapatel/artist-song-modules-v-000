@@ -19,8 +19,9 @@ class Artist
     def initialize
       ##@@artists << self
       #like calling Artist.all
-      self.class.all << self
+      #self.class.all << self
       #set songs to empty array
+      super
       @songs = []
     end
 
