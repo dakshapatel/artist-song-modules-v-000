@@ -7,38 +7,36 @@ class Artist
 
   @@artists = []
 
-  #put artists in the artist array
-    def initialize
-      @@artists << self
-      #set songs to empty array
-      @songs = []
-    end
-
-#can find an artist by name
+#detect artist in the artists array where the
+#artist name is the name
   def self.find_by_name(name)
     @@artists.detect{|a| a.name == name}
   end
 
+#put artists in the artist array
+  def initialize
+    @@artists << self
+    #set songs to empty array
+    @songs = []
+  end
 
-
-  def self.all3
+  def self.all
     #return artist array
     @@artists
   end
   #####
   def self.reset_all
-    #can reset the artists that have been created
+    #clear artists
     self.all.clear
   end
   #####
   def self.count
-    #can count how many artists have been created
+    #count the artists in the artist array
     @@artists.count
-    #self.all.count
   end
 
-  def add_song(song) 
-    #can have a song added
+  def add_song(song)
+    #add song to the songs array
     @songs << song
     #set the artist to the song
     song.artist = self
@@ -50,7 +48,7 @@ class Artist
   end
 
   def to_param
-    #converts its name to a url friendly parameter
+
     name.downcase.gsub(' ', '-')
   end
 
