@@ -23,10 +23,10 @@ class Song
   end
 
   # can count how many songs have been created
-  def self.count
+  #def self.count
     #@@songs.count
-    self.all.count
-  end
+    #self.all.count
+  ##end
 
   #keeps track of the songs that have been created
   def self.all
@@ -34,10 +34,10 @@ class Song
   end
 
   #can reset the songs that have been created
-  def self.reset_all
+  #def self.reset_all
     #@@songs.clear
-    self.all.clear
-  end
+    #self.all.clear
+  #end
 
   #converts its name to a url friendly parameter
   def to_param
