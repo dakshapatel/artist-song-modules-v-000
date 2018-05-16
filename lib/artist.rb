@@ -25,9 +25,9 @@ class Artist
     #return artist array
     @@artists
   end
-  #####
+  
+  #can reset the artists that have been created
   def self.reset_all
-    #clear artists
     self.all.clear
   end
   #####
