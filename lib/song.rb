@@ -22,7 +22,8 @@ class Song
   end
   #####
   def self.reset_all
-    #clear songs in the array
+    #clear songs in the array 
+    #@@songs.clear
     self.all.clear
   end
 
