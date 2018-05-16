@@ -19,13 +19,6 @@ class Artist
     @@artists.detect{|a| a.name == name}
   end
 
-
-
-
-
-
-
-
   #can have a song added
   def add_song(song)
     @songs << song
@@ -36,7 +29,7 @@ class Artist
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
-  
+
   #can count how many artists have been created
   def self.count
     #@@artists.count
@@ -50,6 +43,7 @@ class Artist
 
   #can reset the artists that have been created
   def self.reset_all
+    #@@artists.clear
     self.all.clear
   end
 
