@@ -7,7 +7,7 @@ class Artist
 
   @@artists = []
 
-  #put artists in the artist array
+  #can be initialized
     def initialize
       @@artists << self
       #set songs to empty array
@@ -51,7 +51,7 @@ class Artist
   end
 
   def to_param
-
+    #converts its name to a url friendly parameter
     name.downcase.gsub(' ', '-')
   end
 
