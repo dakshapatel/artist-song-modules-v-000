@@ -23,7 +23,7 @@ class Artist
 
   def self.all3
     #return artist array
-    #keeps track of the artists that have been created
+    #
     @@artists
   end
   #####
