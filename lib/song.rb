@@ -1,6 +1,7 @@
 require 'pry'
 require_relative './concerns/memorable.rb'
 require_relative './concerns/paramable.rb'
+require_relative './concerns/findable.rb'
 
 class Song
 
@@ -22,16 +23,9 @@ class Song
   def artist=(artist)
     @artist = artist
   end
-
-#
-
+  
   #keeps track of the songs that have been created
   def self.all
     @@songs
   end
-
-  #converts its name to a url friendly parameter
-  #def to_param
-    #name.downcase.gsub(' ', '-')
-  #end
 end
