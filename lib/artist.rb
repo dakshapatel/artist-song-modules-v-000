@@ -36,10 +36,9 @@ class Artist
     self.all.count
   end
 
+  #can have a song added
   def add_song(song)
-    #add song to the songs array
     @songs << song
-    #set the artist to the song
     song.artist = self
   end
 
