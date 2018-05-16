@@ -23,7 +23,6 @@ class Artist
 
   def self.all3
     #return artist array
-    #
     @@artists
   end
   #####
@@ -34,11 +33,11 @@ class Artist
   #####
   def self.count
     #can count how many artists have been created
-    #@@artists.count
-    self.all.count
+    @@artists.count
+    #self.all.count
   end
 
-  def add_song(song)
+  def add_song(song) 
     #can have a song added
     @songs << song
     #set the artist to the song
