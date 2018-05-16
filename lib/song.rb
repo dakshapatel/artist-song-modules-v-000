@@ -5,6 +5,7 @@ require_relative './concerns/paramable.rb'
 class Song
 
   extend Memorable::ClassMethods
+  extend Findable::ClassMethods
   include Paramable::InstanceMethod
 
   attr_accessor :name
