@@ -25,14 +25,14 @@ class Artist
     #return artist array
     @@artists
   end
-  
+
   #can reset the artists that have been created
   def self.reset_all
     self.all.clear
   end
-  #####
+
+  #can count how many artists have been created
   def self.count
-    #count the artists in the artist array
     #@@artists.count
     self.all.count
   end
