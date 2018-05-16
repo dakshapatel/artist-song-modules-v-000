@@ -16,16 +16,19 @@ class Song
 
   #can initialize a song
   def initialize
-    @@songs << self
+    #@@songs << self
+    self.class.all << self
   end
 
-  #has an artist
-  def artist=(artist)
-    @artist = artist
-  end
-  
   #keeps track of the songs that have been created
   def self.all
     @@songs
   end
+  
+  #has an artist
+  def artist=(artist)
+    @artist = artist
+  end
+
+  
 end
