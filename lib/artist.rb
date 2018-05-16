@@ -20,21 +20,11 @@ class Artist
   end
 
 
-  #keeps track of the artists that have been created
-  def self.all
-    @@artists
-  end
 
-  #can reset the artists that have been created
-  def self.reset_all
-    self.all.clear
-  end
 
-  #can count how many artists have been created
-  def self.count
-    #@@artists.count
-    self.all.count
-  end
+
+
+
 
   #can have a song added
   def add_song(song)
@@ -45,6 +35,22 @@ class Artist
   #knows how many songs it has
   def add_songs(songs)
     songs.each { |song| add_song(song) }
+  end
+  
+  #can count how many artists have been created
+  def self.count
+    #@@artists.count
+    self.all.count
+  end
+
+  #keeps track of the artists that have been created
+  def self.all
+    @@artists
+  end
+
+  #can reset the artists that have been created
+  def self.reset_all
+    self.all.clear
   end
 
   #converts its name to a url friendly parameter
