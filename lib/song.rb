@@ -22,7 +22,6 @@ class Song
     @@songs.detect{|a| a.name == name}
   end
 
-
   # can count how many songs have been created
   def self.count
     #@@songs.count
