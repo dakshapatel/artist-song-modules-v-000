@@ -22,22 +22,21 @@ class Song
     @@songs.detect{|a| a.name == name}
   end
 
-  #can reset the songs that have been created
-  def self.reset_all
-    #clear songs in the array
-    #@@songs.clear
-    self.all.clear
-  end
-
 
   # can count how many songs have been created
   def self.count
     self.all.count
   end
 
+  #keeps track of the songs that have been created
   def self.all
-
     @@songs
+  end
+
+  #can reset the songs that have been created
+  def self.reset_all
+    #@@songs.clear
+    self.all.clear
   end
 
   #converts its name to a url friendly parameter
