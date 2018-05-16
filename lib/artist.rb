@@ -1,6 +1,7 @@
 require 'pry'
 
 class Artist
+
   attr_accessor :name
   attr_reader :songs
 
@@ -23,15 +24,16 @@ class Artist
     #return artist array
     @@artists
   end
-
+  #####
   def self.reset_all
     #clear artists
     self.all.clear
   end
-
+  #####
   def self.count
     #count the artists in the artist array
-    @@artists.count
+    #@@artists.count
+    self.all.count
   end
 
   def add_song(song)
