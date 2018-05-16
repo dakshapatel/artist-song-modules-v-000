@@ -16,13 +16,16 @@ class Artist
 
   #can be initialized
     def initialize
-      @@artists << self
+      #@@artists << self
+      self.class.all << self
       #set songs to empty array
       @songs = []
     end
 
-
-
+    def self.all
+      @@artists
+    end
+    
   #can have a song added
   def add_song(song)
     @songs << song
@@ -35,13 +38,7 @@ class Artist
   end
 
   #keeps track of the artists that have been created
-  def self.all
-    @@artists
-  end
 
-  #converts its name to a url friendly parameter
-  #def to_param
-    #name.downcase.gsub(' ', '-')
-  #end
+
 
 end
