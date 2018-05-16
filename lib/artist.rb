@@ -36,13 +36,14 @@ class Artist
     self.all.count
   end
 
+  #knows how many songs it has
   #can have a song added
   def add_song(song)
     @songs << song
     song.artist = self
   end
 
-  #knows how many songs it has
+
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
