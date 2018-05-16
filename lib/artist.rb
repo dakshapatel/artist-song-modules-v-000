@@ -7,18 +7,20 @@ class Artist
 
   @@artists = []
 
+  #put artists in the artist array
+    def initialize
+      @@artists << self
+      #set songs to empty array
+      @songs = []
+    end
+
 #detect artist in the artists array where the
 #artist name is the name
   def self.find_by_name(name)
     @@artists.detect{|a| a.name == name}
   end
 
-#put artists in the artist array
-  def initialize
-    @@artists << self
-    #set songs to empty array
-    @songs = []
-  end
+
 
   def self.all
     #return artist array
