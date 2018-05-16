@@ -16,11 +16,11 @@ class Song
   @@songs = []
 
   #can initialize a song
-  def initialize
+  #def initialize
     ##@@songs << self
     ##like calling Song.all
-    self.class.all << self
-  end
+    #self.class.all << self
+  #end
 
   #keeps track of the songs that have been created
   def self.all
