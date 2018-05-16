@@ -14,7 +14,7 @@ module Findable
         #@@artist.detect{|a| a.name == name}
         all.detect{|a| a.name == name}
       end
-    end 
+    end
   end
 
   module InstanceMethod
@@ -22,8 +22,7 @@ module Findable
     def to_param
       name.downcase.gsub(' ', '-')
     end
-
-  end 
+  end
 
 
 end
