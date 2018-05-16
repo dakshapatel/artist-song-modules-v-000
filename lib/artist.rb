@@ -14,7 +14,7 @@ class Artist
       @songs = []
     end
 
-#can find an artist by name
+  #can find an artist by name
   def self.find_by_name(name)
     @@artists.detect{|a| a.name == name}
   end
