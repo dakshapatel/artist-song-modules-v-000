@@ -47,8 +47,8 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
+  #converts its name to a url friendly parameter
   def to_param
-    #converts its name to a url friendly parameter
     name.downcase.gsub(' ', '-')
   end
 
