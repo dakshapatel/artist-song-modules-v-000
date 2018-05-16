@@ -12,4 +12,12 @@ module Memorable
     end
   end
 
+  module InstanceMethod
+    def initialize
+      ##@@songs << self
+      ##like calling Song.all
+      self.class.all << self
+    end
+  end 
+
 end
