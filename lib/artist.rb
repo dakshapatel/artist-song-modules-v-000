@@ -6,7 +6,7 @@ class Artist
 
   @@artists = []
 
-#detect artist in the artists array where the 
+#detect artist in the artists array where the
 #artist name is the name
   def self.find_by_name(name)
     @@artists.detect{|a| a.name == name}
@@ -15,7 +15,7 @@ class Artist
 #put artists in the artist array
   def initialize
     @@artists << self
-    #set songs to empty array 
+    #set songs to empty array
     @songs = []
   end
 
@@ -30,14 +30,14 @@ class Artist
   end
 
   def self.count
-    #count the artists in the artist array 
+    #count the artists in the artist array
     @@artists.count
   end
 
   def add_song(song)
-    #add song to the songs array 
+    #add song to the songs array
     @songs << song
-    #set the artist to the song 
+    #set the artist to the song
     song.artist = self
   end
 
@@ -47,7 +47,7 @@ class Artist
   end
 
   def to_param
-    
+
     name.downcase.gsub(' ', '-')
   end
 
