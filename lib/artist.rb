@@ -31,10 +31,10 @@ class Artist
   end
 
   #can count how many artists have been created
-  def self.count
+  #def self.count
     #@@artists.count
-    self.all.count
-  end
+    #self.all.count
+  #end
 
   #keeps track of the artists that have been created
   def self.all
@@ -42,10 +42,10 @@ class Artist
   end
 
   #can reset the artists that have been created
-  def self.reset_all
+  #def self.reset_all
     #@@artists.clear
-    self.all.clear
-  end
+    #self.all.clear
+  #end
 
   #converts its name to a url friendly parameter
   def to_param
