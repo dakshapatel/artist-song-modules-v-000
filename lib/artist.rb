@@ -47,7 +47,7 @@ class Artist
 
   def add_songs(songs)
     #iterate through each song and add the song
-    ongs.each { |song| add_song(song) }
+    songs.each { |song| add_song(song) }
   end
 
   def to_param
