@@ -12,15 +12,17 @@ class Song
     @@songs << self
   end
 
-  def self.find_by_name(name)
-    #find artists that belong to the song ...
-    @@songs.detect{|a| a.name == name}
-  end
-
   #has an artist
   def artist=(artist)
     @artist = artist
   end
+
+  #can find a song by name
+  def self.find_by_name(name)
+    @@songs.detect{|a| a.name == name}
+  end
+
+
   #####
   def self.reset_all
     #clear songs in the array
@@ -29,9 +31,8 @@ class Song
   end
 
 
-  #####
+  # can count how many songs have been created
   def self.count
-    #count all songs
     self.all.count
   end
 
