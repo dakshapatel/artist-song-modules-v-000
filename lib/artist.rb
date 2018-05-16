@@ -20,9 +20,8 @@ class Artist
   end
 
 
-
+  #keeps track of the artists that have been created
   def self.all
-    #return artist array
     @@artists
   end
 
