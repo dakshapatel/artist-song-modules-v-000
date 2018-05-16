@@ -3,12 +3,12 @@ module Memorable
   module ClassMethods
     def count
       #@@songs.count
-      self.all.count
+      all.count
     end
 
     def reset_all
       #@@songs.clear
-      self.all.clear
+      all.clear
     end
   end
 
