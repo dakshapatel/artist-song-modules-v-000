@@ -25,6 +25,7 @@ class Song
 
   # can count how many songs have been created
   def self.count
+    #@@songs.count
     self.all.count
   end
 
