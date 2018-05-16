@@ -42,8 +42,8 @@ class Artist
     song.artist = self
   end
 
+  #knows how many songs it has
   def add_songs(songs)
-    #iterate through each song and add the song
     songs.each { |song| add_song(song) }
   end
 
