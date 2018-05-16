@@ -1,8 +1,13 @@
 require 'pry'
 require_relative './concerns/memorable.rb'
+require_relative './concerns/paramable.rb'
+require_relative './concerns/findable.rb'
+
 class Artist
 
   extend Memorable::ClassMethods
+  extend Findable::ClassMethods
+  include Paramable::InstanceMethod
 
   attr_accessor :name
   attr_reader :songs
@@ -16,10 +21,7 @@ class Artist
       @songs = []
     end
 
-  #can find an artist by name
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+
 
   #can have a song added
   def add_song(song)
@@ -32,26 +34,14 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  #can count how many artists have been created
-  #def self.count
-    #@@artists.count
-    #self.all.count
-  #end
-
   #keeps track of the artists that have been created
   def self.all
     @@artists
   end
 
-  #can reset the artists that have been created
-  #def self.reset_all
-    #@@artists.clear
-    #self.all.clear
-  #end
-
   #converts its name to a url friendly parameter
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  #def to_param
+    #name.downcase.gsub(' ', '-')
+  #end
 
 end
