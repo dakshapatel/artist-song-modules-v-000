@@ -19,10 +19,7 @@ class Song
     @artist = artist
   end
 
-  #can find a song by name
-  def self.find_by_name(name)
-    @@songs.detect{|a| a.name == name}
-  end
+#
 
   #keeps track of the songs that have been created
   def self.all
@@ -30,7 +27,7 @@ class Song
   end
 
   #converts its name to a url friendly parameter
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  #def to_param
+    #name.downcase.gsub(' ', '-')
+  #end
 end
