@@ -16,7 +16,8 @@ class Song
 
   #can initialize a song
   def initialize
-    #@@songs << self
+    ##@@songs << self
+    ##like calling Song.all
     self.class.all << self
   end
 
@@ -24,7 +25,7 @@ class Song
   def self.all
     @@songs
   end
-  
+
   #has an artist
   def artist=(artist)
     @artist = artist
