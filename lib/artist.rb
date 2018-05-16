@@ -32,7 +32,8 @@ class Artist
   #####
   def self.count
     #count the artists in the artist array
-    @@artists.count
+    #@@artists.count
+    self.all.count
   end
 
   def add_song(song)
