@@ -1,7 +1,7 @@
 require 'pry'
-
+require_relative './memorable.rb'
 class Song
-  
+
   extend Memorable::ClassMethods
 
   attr_accessor :name
